@@ -9,7 +9,12 @@ $(document).ready(function(){
 
         for (var i = 0; i < 9; i++){
             if(pressedKey === correctNumber){
-                // if guess is correct
+                // Increment wins if guess is correct
+                $('#win').text(`Wins: ${totalWins++}`);
+                // Reset the letters guessed
+                $('#userGuesses').text('Your guesses so far:');
+                // Reset guesses left
+                $('$attempts').text('Guesses left:');
             } else{
                 // if guess is incorrect
             }
