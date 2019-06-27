@@ -1,18 +1,18 @@
 $(document).ready(function(){
     // ASCII code for alphabet (a-z = 97-122)
-    // var correctNumber = Math.floor(Math.random() * 25) + 97;
-    var correctNumber = Math.floor(Math.random() * 9) + 48;
-    console.log(correctNumber);
+    var correctGuess = Math.floor(Math.random() * 25) + 97;
+
+    console.log(`Guess this ${correctGuess}`);
     var totalWins = 0;
     var totalLosses = 0;
     var guessesLeft = 10;
 
     $(document).on('keypress', function(event){
-        var pressedKey = event.keyCode;
+        var pressedKey = event.keyCode; 
         // console.log(event.key);
-        // console.log(event.keyCode);
+        console.log(event.keyCode);
 
-        if(pressedKey === correctNumber){
+        if(pressedKey === correctGuess){
             // Increment wins if guess is correct
             totalWins++;
             $('#win').text(`Wins: ${totalWins}`);
@@ -20,6 +20,9 @@ $(document).ready(function(){
             $('#userGuesses').text('Your guesses so far:');
             // Reset guesses left
             $('#attempts').text('Guesses left:');
+            // Start new game with new randomized letter
+            correctGuess = Math.floor(Math.random() * 25) + 97;
+            console.log(`Guess this ${correctGuess}`);
         } else{
             // Note what letter has been guessed
             $('#userGuesses').append(` ${event.key},`);
@@ -36,6 +39,9 @@ $(document).ready(function(){
                     // Reset guesses left
                     $('#attempts').text('Guesses left:');
                     guessesLeft = 10;
+                    // Start new game with new randomized letter
+                    correctGuess = Math.floor(Math.random() * 25) + 97;
+                    console.log(`Guess this ${correctGuess}`);
                 }
         }
     })
