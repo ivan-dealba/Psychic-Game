@@ -7,15 +7,20 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='assets/css/reset.css'> -->
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/style.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script type='text/javascript' src='assets/javascript/game.js'></script>
 </head>
 <body background="assets/images/psychic.jpeg">
-    <h1>The Psychic Game</h1>
-    <h3>Guess what letter I'm thinking of</h3>
-    <h3 id="win">Wins:</h3>
-    <h3 id="loss">Losses:</h3>
-    <h3 id="attempts">Guesses left:</h3>
-    <h3 id="userGuesses">Your guesses so far:</h3>
+    <div class='jumbotron'>
+        <h1 class='text-primary text-center'>The Psychic Game</h1>
+    </div>
+    <div class='container bg-light col-lg-6'>
+        <h3 class='text-center font-weight-bolder text-primary'>Guess what letter I'm thinking of</h3>
+        <h3 id="win" class='text-center text-primary'>Wins:</h3>
+        <h3 id="loss" class='text-center text-primary'>Losses:</h3>
+        <h3 id="attempts" class='text-center text-primary'>Guesses left:</h3>
+        <h3 id="userGuesses" class='text-center text-primary'>Your guesses so far:</h3>
+    </div>
 </body>
 </html>
